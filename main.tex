@@ -1,0 +1,71 @@
+
+\documentclass[12pt, british]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\pagestyle{headings}
+
+\usepackage{setspace}                   % used for line spacing
+\renewcommand{\baselinestretch}{1.5} 
+
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% Add any other packages you may need
+\usepackage{url}
+\usepackage{graphicx}                                           % Graphics library
+\usepackage{tikz}                                               % Latex drawing package
+\usetikzlibrary{calc,positioning,shapes,decorations.pathreplacing}  % tikz libraries
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+\usepackage{authordate1-4}                                      % for authordate ref style only
+\usepackage{natbib}
+\usepackage{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Glossary section %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[toc]{glossaries}  
+\setacronymstyle{long-short}
+\include{glossary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Glossary section %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\makeatother
+\usepackage{babel}
+
+\begin{document}
+\selectlanguage{british}%
+
+\title{Course Work MSc 2017\\
+Module 2\\
+Digital Forensics and Incident Response}
+
+
+\author{YOUR NAME\\
+YOUR Student Number}
+
+\maketitle
+\noindent \begin{center}
+\rule[0.5ex]{1\linewidth}{1pt}
+\par\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% All sections are in a separate file in Questions folder %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{Sections/Section_A}
+\include{Sections/Section_B}
+\include{Sections/Section_C}
+
+
+
+
+\bibliographystyle{ruauthordate}   % also uncomment the usepackage{authordate1-4} above
+  
+\bibliography{ref} 
+
+\end{document}
